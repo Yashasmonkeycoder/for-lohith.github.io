@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Happy new year</title>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style type="text/css" >
+      body{
+        background-image: linear-gradient(to right,#8eb6c0,#dde4e6,#7589cb);
+      }
+      #cont{
+        width: 280px;
+        height: 110px;
+        border: solid black 1px;
+        border-radius: 35px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        background-color: #c5d3c4;
+      }
+      .still{
+        color: #c77777;
+        position: absolute;
+        top: -70%;
+        left:30%;
+      }
+      .twxt{
+        position: absolute;
+        top: -200%;
+        background-color: #e4e8e9;
+        color: #cd8fc5;
+        border: dotted #5dc05e 3px;
+        border-radius: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont" >
+      <h1 class="twxt" >For a special day 🌟</h1>
+      <h2 class="still" >still left:</h2>
+      <h1 id="text" >00:00:00</h1>
+    </div>
+  </body>
+</html>
+<script>
+var date = new Date();
+if(date.getFullYear()==2022){
+  setInterval(
+    function (){
+      date = new Date();
+      var time = 24-parseInt(date.getHours())+": "+(60-parseInt(date.getMinutes()))+": "+(60-parseInt(date.getSeconds()));
+      document.getElementById("text").innerHTML=18-parseInt(String(date.getDate()).padStart(2, '0'))+'days, <br>'+time
+    },1000)}
+else{
+      document.getElementById("cont").innerHTML=" <h2>It's already "+date.getFullYear()+" yay 😆😁🎉🎉</hh2 "
+    }
+    
+    
+</script>
